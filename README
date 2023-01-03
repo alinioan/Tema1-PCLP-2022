@@ -1,0 +1,78 @@
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Tema #1 PCLP - Functii, Vectori si Matrice
+Nume: Alexandru Alin-Ioan
+Seria: CA
+Grupa: 312CA
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Descrierea temei
+
+> Gigel are 4 probleme si are nevoie de ajutor pentru a le rezolva. Nestiind ce
+sa faca, el cere ajutorul studentilor de la ACS.
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Fisierele si Problemele temei
+
+> Fisierul Makefile este folosit pentru a compila cele 4 surse si pentru a
+sterge mai apoi executabilele create
+> Codul sursa al fiecarei probleme se afla in fisierul cu numele corespunzator:
+
+1. infinite_product.c
+> Numerele citite de la STDIN sunt convertite in baza 10.
+> Se realizeaza calculele necesare pentru a determina produsul scalar, 
+normele celor doi vectori si al doilea cel mai mare element.
+> Normele celor doi vectori au fost calculate folosind variabile de tip double,
+deoarece patratul unor elemente este mult prea mare pentru a putea fi retinut
+intr-o variabila de tip long.
+
+2. simple_queries.c
+> Citirea literelor este facuta cu ajutorul functiei getline
+    - O solutie pentru evitarea citirii separata a spatiilor si 
+    caracterelor "enter"
+    - "#define  _GNU_SOURCE" este folosit pentru a rezolva warning-ul
+    "implicit declaration of function" pentru functia getline
+> Interogarea T
+    - Se sorteaza un sir format din "id-urile"('a' are id = 0, 'b' are id = 1,
+    etc.) caracterelor in functie de frecventa lor 
+> Alerta
+    - De fiecare data cand este timpul pentru o alerta se cauta mai intai ce
+    litera are cea mai mare frecventa
+    - Fractia dintre frecventa celei mai comune litere si a numarului total
+    de litere este simplificata folosind cmmdc-ul acestor doua valori
+
+3. gigel_and_the_checkboard.c
+> Matricea se parcurge pana cand se intalneste un element egal cu 0
+> Patratele albe au suma indicilor para, iar cele negre impara
+> Urmatoarea pozitie se determina folosind restul impartirii la n al valorii
+curente
+> Determinarea indicelui coloanei pentru afisare este facuta comparand ultimul
+indice la care am ajuns cu numarul de litere din alfabetu englez (26) si cu
+patratul acestuia
+    - Astfel stabilim cate litere va avea indicele coloanei
+    - Putem face aceasta comparatie, pentru ca dimensiunea maxima a matricei
+    este de 1000 de coloane
+    - Literele sunt "calculate" folosind operatia modulo
+
+4. another_queries.c
+>  In cazul operatiilor 1, 2, 3, 4 si 6 au fost implementate functii pentru
+verificarea conditiilor cerute
+    - Pentru fiecare dintre aceste operatii este folosit un tablou pentru a
+    retine ce valori au aparut pe liniile/coloanele/careurile verificate
+> Operatia 3
+    - S-a dedus o formula pentru transformarea numarului careului in indicii 
+    respectivi ai matricei
+    - Careul este parcurs ca o matrice cu n x n elemente
+> Operatia 4
+    - Combina algoritmii folositi pentru primele 3 operatii
+    - Pe langa formula de la operatia 3 s-a mai dedus o formula pentru 
+    identificarea careului unui element specific
+> Operatia 6
+    - Se verifica cu ajutorul unor functii asemanatoare celor de la primele
+    doua operatii daca se repeta elemente pe linii si pe coloane
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Alte precizari
+
+> Unele functii folosesc pointeri pentru a transmite valoarea parametrilor
+    - Tema precizeaza ca materia necesara este pana la cursul de pointeri, dar
+    acestia au fost necesari pentru modularizare 
+> Pentru problema "another_queries" s-ar fi putut realiza o modularizare mai
+buna, doarece cateva secvente de cod se repeta in functii diferite
